@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbigot <nbigot@learner.42.tech>            +#+  +:+       +#+        */
+/*   By: nbigot <nbigot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 13:21:38 by nbigot            #+#    #+#             */
-/*   Updated: 2026/05/05 16:21:09 by nbigot           ###   ########.fr       */
+/*   Created: 2026/04/21 17:11:17 by nbigot            #+#    #+#             */
+/*   Updated: 2026/05/04 12:05:57 by nbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}
 
-int	ft_printf(const char *, ...);
-
-#endif
+/*int	main(void)
+{
+	ft_putendl_fd("Hasta la vista Baby", 1);
+	return (0);
+}*/

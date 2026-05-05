@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbigot <nbigot@learner.42.tech>            +#+  +:+       +#+        */
+/*   By: nbigot <nbigot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 13:21:38 by nbigot            #+#    #+#             */
-/*   Updated: 2026/05/05 16:21:09 by nbigot           ###   ########.fr       */
+/*   Created: 2026/04/20 11:09:37 by nbigot            #+#    #+#             */
+/*   Updated: 2026/04/28 15:09:38 by nbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
-int	ft_printf(const char *, ...);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
 
-#endif
+/*int	main(void)
+{
+	printf("Le resultat est : %zu\n", ft_strlen("Hasta"));
+	return(0);
+}*/

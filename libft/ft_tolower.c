@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbigot <nbigot@learner.42.tech>            +#+  +:+       +#+        */
+/*   By: nbigot <nbigot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 13:21:38 by nbigot            #+#    #+#             */
-/*   Updated: 2026/05/05 16:21:09 by nbigot           ###   ########.fr       */
+/*   Created: 2026/04/20 11:12:59 by nbigot            #+#    #+#             */
+/*   Updated: 2026/04/28 14:20:12 by nbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+	{
+		c = c + 32;
+	}
+	return (c);
+}
 
-int	ft_printf(const char *, ...);
-
-#endif
+/*int	main(void)
+{
+	char    test = 'A';
+	printf("Le resultat est : %c\n", ft_tolower(test));
+	return (0);
+}*/

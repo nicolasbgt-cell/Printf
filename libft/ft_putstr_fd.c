@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbigot <nbigot@learner.42.tech>            +#+  +:+       +#+        */
+/*   By: nbigot <nbigot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 13:21:38 by nbigot            #+#    #+#             */
-/*   Updated: 2026/05/05 16:21:09 by nbigot           ###   ########.fr       */
+/*   Created: 2026/04/21 17:10:53 by nbigot            #+#    #+#             */
+/*   Updated: 2026/05/05 10:28:17 by nbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+void	ft_putstr_fd(char *s, int fd)
+{
+	size_t	i;
 
-int	ft_printf(const char *, ...);
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+}
 
-#endif
+/*int	main(void)
+{
+	ft_putstr_fd("Hasta la vista Baby", 1);
+	return (0);
+}*/
