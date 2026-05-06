@@ -6,7 +6,7 @@
 /*   By: nbigot <nbigot@learner.42.tech>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 13:21:38 by nbigot            #+#    #+#             */
-/*   Updated: 2026/05/06 16:17:53 by nbigot           ###   ########.fr       */
+/*   Updated: 2026/05/06 17:05:29 by nbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-#include "libft/libft.h"
+# include "libft/libft.h"
 
 int	ft_printf(const char *str, ...);
 int	ft_print_char(char c);
