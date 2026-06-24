@@ -1,4 +1,4 @@
-*This activity has been created as part of the 42 curriculum by <nbigot>.*
+*This activity has been created as part of the 42 curriculum by nbigot.*
 
 # ft-printf
 
